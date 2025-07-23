@@ -27,6 +27,8 @@ sales_insights/
 
 ├── database.py # Conexão com SQLite
 
+└── tests.py # Teste de ambiente para importações
+
 ├── utils.py # Integração com LangChain + OpenAI
 
 ├── sales.db # Base de dados SQLite com dados de exemplo
@@ -34,6 +36,8 @@ sales_insights/
 ├── .env # Chave da OpenAI (não versionar)
 
 └── requirements.txt # Dependências do projeto
+
+
 
 
 ---
