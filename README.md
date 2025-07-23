@@ -31,7 +31,7 @@ sales_insights/
 
 ├── utils.py # Integração com LangChain + OpenAI
 
-├── sales.db # Base de dados SQLite com dados de exemplo
+├── sales.db # Base de dados SQLite com dados de exemplo ( versionado pois são dados de exemplo.)
 
 ├── .env # Chave da OpenAI (não versionar)
 
@@ -66,9 +66,13 @@ source env/bin/activate  # Linux/macOS
 # 3. Instale as dependências
 pip install -r requirements.txt
 
-# 4. Insira a chave no .env
+#4. Inicie o teste de ambiente - análise o retorno para seguir.
 
-# 5. Inicie o servidor
+python tests.py
+
+# 5. Insira a chave no .env
+
+# 6. Inicie o servidor
 uvicorn main:app --reload
 
 Acesse: http://127.0.0.1:8000/docs
