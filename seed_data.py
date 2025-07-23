@@ -22,7 +22,7 @@ def execute_sql_file(db: Session, file_path: str):
                 print(f"\n Erro ao executar:\n{cmd}\nErro: {e}")
 
 def main():
-    print("⏳ Criando tabelas e carregando dados...")
+    print(" Criando tabelas e carregando dados...")
 
     # Cria as tabelas se não existirem
     Base.metadata.create_all(bind=engine)
