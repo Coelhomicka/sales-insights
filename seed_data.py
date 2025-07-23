@@ -19,7 +19,7 @@ def execute_sql_file(db: Session, file_path: str):
             try:
                 db.execute(text(cmd))
             except Exception as e:
-                print(f"\n❌ Erro ao executar:\n{cmd}\nErro: {e}")
+                print(f"\n Erro ao executar:\n{cmd}\nErro: {e}")
 
 def main():
     print("⏳ Criando tabelas e carregando dados...")
@@ -31,9 +31,9 @@ def main():
     try:
         execute_sql_file(db, SQL_SCRIPT_PATH)
         db.commit()
-        print("✅ Dados carregados com sucesso no banco!")
+        print(" Dados carregados com sucesso no banco!")
     except Exception as e:
-        print("❌ Erro ao carregar dados:", e)
+        print(" Erro ao carregar dados:", e)
         db.rollback()
     finally:
         db.close()
