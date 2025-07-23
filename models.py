@@ -2,6 +2,8 @@ from sqlalchemy import Column, Integer, String, Numeric, ForeignKey, TIMESTAMP
 from sqlalchemy.orm import relationship
 from database import Base
 
+# Define os modelos de dados para o banco de dados de vendas
+# Cada classe representa uma tabela no banco de dados
 class Product(Base):
     __tablename__ = "products"
 
@@ -13,7 +15,7 @@ class Product(Base):
 
     sales = relationship("Sale", back_populates="product")
 
-
+# Define o modelo de cliente
 class Customer(Base):
     __tablename__ = "customers"
 
@@ -23,7 +25,7 @@ class Customer(Base):
 
     sales = relationship("Sale", back_populates="customer")
 
-
+# Define o modelo de venda
 class Sale(Base):
     __tablename__ = "sales"
 

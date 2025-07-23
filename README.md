@@ -1,6 +1,6 @@
 #  Sales Insights - FastAPI + LangChain + OpenAI
 
-Este projeto é uma API que permite consultar insights de vendas a partir de uma base de dados relacional, utilizando linguagem natural. Foi desenvolvido como parte do processo seletivo para a vaga de Desenvolvedor Python com IA Generativa — The Garage.
+Este projeto é uma API que permite consultar insights de vendas a partir de uma base de dados relacional, utilizando linguagem natural. 
 
 ---
 
@@ -18,13 +18,21 @@ Este projeto é uma API que permite consultar insights de vendas a partir de uma
 ##  Estrutura do projeto
 
 sales_insights/
+
 │
+
 ├── main.py # Inicialização da API e rotas
+
 ├── crud.py # Lógica de extração do banco
+
 ├── database.py # Conexão com SQLite
+
 ├── utils.py # Integração com LangChain + OpenAI
+
 ├── sales.db # Base de dados SQLite com dados de exemplo
+
 ├── .env # Chave da OpenAI (não versionar)
+
 └── requirements.txt # Dependências do projeto
 
 
@@ -32,7 +40,7 @@ sales_insights/
 
 ##  Variáveis de ambiente
 
-Crie um arquivo `.env` na raiz do projeto com:
+Adicione a chave da OpenAI no arquivo `.env` :
 
 OPENAI_API_KEY=sua_chave_aqui
 
@@ -43,7 +51,7 @@ OPENAI_API_KEY=sua_chave_aqui
 
 ```bash
 # 1. Clone o repositório
-git clone <url-do-repo>
+git clone https://github.com/Coelhomicka/sales-insights-api/
 cd sales_insights
 
 # 2. Crie e ative um ambiente virtual
@@ -54,7 +62,9 @@ source env/bin/activate  # Linux/macOS
 # 3. Instale as dependências
 pip install -r requirements.txt
 
-# 4. Inicie o servidor
+# 4. Insira a chave no .env
+
+# 5. Inicie o servidor
 uvicorn main:app --reload
 
 Acesse: http://127.0.0.1:8000/docs
